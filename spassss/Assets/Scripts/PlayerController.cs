@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 	public Boundary boundary;
 	public int power=10;
 	public GameObject shot;
+	public GameObject bomb;
 	public Transform shotSpawn;
 	public Transform LshotSpawn;
 	public float fireRate;
@@ -29,6 +30,10 @@ public class PlayerController : MonoBehaviour
 			Instantiate(shot,LshotSpawn.position,shotSpawn.rotation);
 			audio.Play ();
 		}
+		if (Input.GetButton ("Bomb")) {
+			Instantiate(bomb);
+				}
+
 	}
 	
 	void FixedUpdate ()
