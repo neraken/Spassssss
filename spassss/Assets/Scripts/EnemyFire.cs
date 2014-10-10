@@ -5,8 +5,8 @@ public class EnemyFire : MonoBehaviour {
 
 	public GameObject shot;
 	public Transform shotSpawn;
-	public float nextFire;
-	private float fireRate;
+	private float nextFire;
+	public float fireRate;
 	// Update is called once per frame
 	void Update () {
 
@@ -14,7 +14,7 @@ public class EnemyFire : MonoBehaviour {
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-			audio.Play ();
+		//	audio.Play ();
 		}
 	}
 }

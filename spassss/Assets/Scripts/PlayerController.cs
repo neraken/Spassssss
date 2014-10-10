@@ -18,8 +18,24 @@ public class PlayerController : MonoBehaviour
 	public Transform shotSpawn;
 	public Transform LshotSpawn;
 	public float fireRate;
-	
+
+
+	private GameController gameController;
+
 	private float nextFire;
+
+	void Start ()
+	{
+		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
+		if (gameControllerObject != null)
+		{
+			gameController = gameControllerObject.GetComponent <GameController>();
+		}
+		if (gameController == null)
+		{
+			Debug.Log ("Cannot find 'GameController' script");
+		}
+	}
 	
 	void Update ()
 	{
@@ -32,6 +48,11 @@ public class PlayerController : MonoBehaviour
 		}
 		if (Input.GetButton ("Bomb")) {
 			Instantiate(bomb);
+
+			gameController.bombUsed();
+				}
+		if (Input.GetButton ("Ability")) {
+			gameController.abilityUsed();
 				}
 
 	}
