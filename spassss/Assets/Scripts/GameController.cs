@@ -36,7 +36,9 @@ public class GameController : MonoBehaviour
 	private List <GameObject> Enemy;
 
 	private bool startSpawn;
-	
+
+
+
 	void Start ()
 	{
 		gameOver = false;
@@ -85,7 +87,7 @@ public class GameController : MonoBehaviour
 	void SpawnTimeTable(){
 		if (startSpawn) {
 						GameObject spawn = spawners [Random.Range (0, spawners.Length)];
-						GameObject clone = Instantiate (engines_enemy, spawn.transform.position, Quaternion.identity) as GameObject;
+			GameObject clone = Instantiate (engines_enemy, spawn.transform.position, Quaternion.Euler(90, 0, 0)) as GameObject;
 						clone.name = "Enemy - " + Time.time.ToString ();
 						Enemy.Add (clone);
 				}

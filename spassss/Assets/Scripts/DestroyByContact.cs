@@ -84,14 +84,26 @@ public class DestroyByContact : MonoBehaviour
 		{
 			return;
 		}
-		Instantiate(explosion, transform.position, transform.rotation);
-		if (other.tag == "Player")
-		{
-			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-			gameController.playerDestroyed();
+		//Instantiate(explosion, transform.position, transform.rotation);
+		if (other.tag == "Player") {
+			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+			gameController.GameOver ();
+			Destroy(other.gameObject);
 		}
-		gameController.AddScore (scoreValue);
-		Destroy(other.gameObject);
-		Destroy(gameObject);
-	}
+		else if (gameObject.tag == "PlayerBullet" && other.tag == "Player") {
+			Debug.Log ("no friendly fire1");		
+		} else if (gameObject.tag == "Enemy" && other.tag == "Enemy") {
+			Debug.Log ("no friendly fire2");			
+		} else if(gameObject.tag == "Enemy" && other.tag == "Player"){
+			Instantiate(explosion, transform.position, transform.rotation);
+			gameController.AddScore (scoreValue);
+			Destroy (other.gameObject);
+			Destroy (gameObject);
+		} else if(gameObject.tag == "Enemy" && other.tag == "PlayerBullet"){
+			Instantiate(explosion, transform.position, transform.rotation);
+			gameController.AddScore (scoreValue);
+			Destroy (other.gameObject);
+			Destroy (gameObject);
+		}
+}
 }
