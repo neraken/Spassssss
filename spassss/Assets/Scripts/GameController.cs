@@ -88,6 +88,7 @@ public class GameController : MonoBehaviour
 		if (startSpawn) {
 						GameObject spawn = spawners [Random.Range (0, spawners.Length)];
 			GameObject clone = Instantiate (engines_enemy, spawn.transform.position, Quaternion.Euler(90, 0, 0)) as GameObject;
+			//GameObject clone = Instantiate (engines_enemy) as GameObject;
 						clone.name = "Enemy - " + Time.time.ToString ();
 						Enemy.Add (clone);
 				}
