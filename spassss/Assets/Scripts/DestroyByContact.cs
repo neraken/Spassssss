@@ -88,6 +88,7 @@ public class DestroyByContact : MonoBehaviour
 		if (other.tag == "Player") {
 			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 			gameController.GameOver ();
+			Destroy (gameObject);
 			Destroy(other.gameObject);
 		}
 		else if (gameObject.tag == "PlayerBullet" && other.tag == "Player") {
