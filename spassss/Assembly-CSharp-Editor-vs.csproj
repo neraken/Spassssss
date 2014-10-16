@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_4;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_0;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -48,42 +48,70 @@
   <ItemGroup>
      <Compile Include="Assets\BulletML-Unity\Scripts\Editor\BulletMLMenu.cs" />
      <Compile Include="Assets\BulletML-Unity\Scripts\Editor\ScriptableObjectUtility.cs" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_time_twist.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_homing.xml" />
+     <None Include="Assets\test-shot.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[tenmado]_5_boss_1.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss1.xml" />
      <None Include="Assets\Advanced Pooling System\Readme.txt" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_two_cross.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Dodonpachi]_hibachi.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_DNA.xml" />
+     <None Include="Assets\UnityChan\license.txt" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_2_boss_struggling.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_10_boss_before_final.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Dodonpachi]_kitiku_3.xml" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[MDA]_mojya.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_circle.xml" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_1_boss_grow_bullets.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[XII_STAG]_3b.xml" />
      <None Include="Assets\license.txt" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Bulletsmorph]_kunekune_plus_homing.xml" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
      <None Include="Assets\BulletML-Unity\Plugins\BulletMLLib\LICENSE.txt" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[SilverGun]_4D_boss_PENTA.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_curves.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_tsunami.xml" />
+     <None Include="Assets\UnityChan\Stage\Shader\AlphaMask.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[OtakuTwo]_self-1020.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss4.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Ketui_LT]_2boss_winder_crash.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_triggers.xml" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[MDA]_mossari.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss3.xml" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Bulletsmorph]_fallen_string.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_BossFinal.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss2.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[MDA]_circular_sun.xml" />
  <Reference Include="Equationator">
- <HintPath>C:/Users/Nathan/Documents/GitHub/Spassssss/spassss/Assets/BulletML-Unity/Plugins/BulletMLLib/externals/Equationator.dll</HintPath>
+ <HintPath>Assets\BulletML-Unity\Plugins\BulletMLLib\externals\Equationator.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\iPhonePlayer\EditorExtensions\UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WP8.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\WP8Support\EditorExtensions\UnityEditor.WP8.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Metro.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\MetroSupport\EditorExtensions\UnityEditor.Metro.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.BB10.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\BB10Player\EditorExtensions\UnityEditor.BB10.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
