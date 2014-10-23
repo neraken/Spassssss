@@ -56,6 +56,7 @@
      <None Include="Assets\Advanced Pooling System\Readme.txt" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_two_cross.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Dodonpachi]_hibachi.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\swirl_bullet.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_DNA.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_2_boss_struggling.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_10_boss_before_final.xml" />
