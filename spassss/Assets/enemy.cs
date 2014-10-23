@@ -1,8 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class enemy : destroyableActor {
+public class enemy : MonoBehaviour {
 
+	public int health =10;
+	
+	public void doDmg(int dmg){
+		health -= dmg;
+		if (health <= 0) {
+			Destroy(this.gameObject);
+		}
+	}
 	// Use this for initialization
 	void Start () {
 	

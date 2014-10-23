@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml>
+
+  <action label="top">
+    <action>
+      <repeat>
+        <times>99999</times>
+		<action>
+        		<trigger>beforefire</trigger>
+        		<wait>30</wait>
+        		<repeat>
+          			<times>12</times>
+          			<action>
+	            		<fire>
+	              			<direction type="sequence">30</direction>
+	              			<speed>0.1</speed>
+	             			 <bullet label="curve">
+				              <action>
+				                <changeDirection>
+				                  <!-- Angle in degrees-->
+				                  <!-- Relative = added to the base direction-->
+				                  <direction type="relative">45</direction>
+				                  <!-- Time, in frames, to apply the angle above-->
+				                  <term>120</term>
+				                </changeDirection>
+				                <accel>
+								  <vertical>-0.5</vertical>
+								  <term>180</term>
+								</accel>
+
+				              </action>
+				              </bullet>
+	            		</fire>
+          			</action>
+        		</repeat>
+        
+        		<wait>30</wait>
+        		<trigger>afterfire</trigger>
+        		<wait>60</wait>
+			</action>
+      </repeat>
+    </action>
+  </action>
+
+
+</bulletml>

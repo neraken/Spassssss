@@ -49,8 +49,8 @@
      <Compile Include="Assets\BulletML-Unity\Scripts\Editor\BulletMLMenu.cs" />
      <Compile Include="Assets\BulletML-Unity\Scripts\Editor\ScriptableObjectUtility.cs" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_time_twist.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\circle_bullet.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_homing.xml" />
-     <None Include="Assets\test-shot.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[tenmado]_5_boss_1.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss1.xml" />
      <None Include="Assets\Advanced Pooling System\Readme.txt" />
@@ -60,8 +60,10 @@
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_2_boss_struggling.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_10_boss_before_final.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Dodonpachi]_kitiku_3.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\straight_bullet.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[MDA]_mojya.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_circle.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\triple_bullet.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_1_boss_grow_bullets.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[XII_STAG]_3b.xml" />
      <None Include="Assets\license.txt" />
@@ -76,6 +78,7 @@
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_triggers.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[MDA]_mossari.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss3.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\spiral_circle_bullets.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Bulletsmorph]_fallen_string.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_BossFinal.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss2.xml" />

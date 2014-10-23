@@ -104,7 +104,8 @@ public class DestroyByContact : MonoBehaviour
 			Instantiate(explosion, transform.position, transform.rotation);
 			gameController.AddScore (scoreValue);
 			Destroy (other.gameObject);
-			Destroy (gameObject);
+			enemy e = (enemy) gameObject.GetComponent(typeof(enemy));
+			e.doDmg(1);
 		}
 }
 }
