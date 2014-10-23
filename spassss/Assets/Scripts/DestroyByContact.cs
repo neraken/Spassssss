@@ -97,12 +97,10 @@ public class DestroyByContact : MonoBehaviour
 			Debug.Log ("no friendly fire2");			
 		} else if(gameObject.tag == "Enemy" && other.tag == "Player"){
 			Instantiate(explosion, transform.position, transform.rotation);
-			gameController.AddScore (scoreValue);
 			Destroy (other.gameObject);
 			Destroy (gameObject);
 		} else if(gameObject.tag == "Enemy" && other.tag == "PlayerBullet"){
 			Instantiate(explosion, transform.position, transform.rotation);
-			gameController.AddScore (scoreValue);
 			Destroy (other.gameObject);
 			enemy e = (enemy) gameObject.GetComponent(typeof(enemy));
 			e.doDmg(1);

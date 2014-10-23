@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
 	public int astroidHealth;
 	public int playerLives;
 	public int bombCount;
+	public int bombStrength = 100;
 	public GameObject bombExplosion;
 	public int abilityCharge;
 	
@@ -151,8 +152,8 @@ public class GameController : MonoBehaviour
 						GameObject[] everything = GameObject.FindGameObjectsWithTag ("Enemy");
 						for (int i = 0; i < everything.Length; i++) {
 								Instantiate (bombExplosion, everything [i].transform.position, everything [i].transform.rotation);
-								Destroy (everything [i]);
-								AddScore(10);
+				enemy e = (enemy) everything[i].GetComponent(typeof(enemy));
+				e.doDmg(10);
 						}
 			GameObject[] bullets = GameObject.FindGameObjectsWithTag("enemy");
 			for(int i = 0; i < bullets.Length; i++){
