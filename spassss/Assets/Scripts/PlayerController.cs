@@ -18,8 +18,7 @@ public class PlayerController : MonoBehaviour
 	public Transform shotSpawn;
 	public Transform LshotSpawn;
 	public float fireRate;
-
-
+	
 	private GameController gameController;
 
 	private float nextFire;
@@ -46,15 +45,13 @@ public class PlayerController : MonoBehaviour
 			Instantiate(shot,LshotSpawn.position,shotSpawn.rotation);
 			audio.Play ();
 		}
-		if (Input.GetButton ("Bomb")) {
-			Instantiate(bomb);
+		if (Input.GetKeyDown (KeyCode.B)) {
 
 			gameController.bombUsed();
 				}
 		if (Input.GetButton ("Ability")) {
 			gameController.abilityUsed();
 				}
-
 	}
 	
 	void FixedUpdate ()

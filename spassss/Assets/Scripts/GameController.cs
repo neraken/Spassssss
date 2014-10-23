@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
 	public int astroidHealth;
 	public int playerLives;
 	public int bombCount;
+	public GameObject bombExplosion;
 	public int abilityCharge;
 	
 	public GUIText lifeText;
@@ -145,9 +146,23 @@ public class GameController : MonoBehaviour
 		}
 
 	public void bombUsed(){
-		
-		bombCount = bombCount -1;
-		bombText.text = "bomb:" + bombCount;
+		if (bombCount > 0) {
+						Debug.Log ("bomb used");
+						GameObject[] everything = GameObject.FindGameObjectsWithTag ("Enemy");
+						for (int i = 0; i < everything.Length; i++) {
+								Instantiate (bombExplosion, everything [i].transform.position, everything [i].transform.rotation);
+								Destroy (everything [i]);
+								AddScore(10);
+						}
+			GameObject[] bullets = GameObject.FindGameObjectsWithTag("enemy");
+			for(int i = 0; i < bullets.Length; i++){
+				Instantiate (bombExplosion, bullets [i].transform.position, bullets [i].transform.rotation);
+				Destroy (bullets [i]);
+			}
+			bombCount = bombCount -1;
+			bombText.text = "bomb:" + bombCount;
+				}
+
 	}
 	public void abilityUsed(){
 		if (abilityCharge == 100) {
