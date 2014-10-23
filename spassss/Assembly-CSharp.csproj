@@ -138,6 +138,7 @@
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Dodonpachi]_hibachi.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\swirl_bullet.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_DNA.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\accel_bullet.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_2_boss_struggling.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_10_boss_before_final.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Dodonpachi]_kitiku_3.xml" />
@@ -154,6 +155,7 @@
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_curves.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_tsunami.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[OtakuTwo]_self-1020.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\expand_bullet.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss4.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Ketui_LT]_2boss_winder_crash.xml" />
      <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_triggers.xml" />
