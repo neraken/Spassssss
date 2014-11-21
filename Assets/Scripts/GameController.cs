@@ -44,6 +44,7 @@ public class GameController : MonoBehaviour
 	public Texture2D startBtnImg;
 	public Texture2D quitBtnImg;	
 	private bool startSpawn;
+	public TextAsset bulletFile;
 	private int count = 0;
 	void OnGUI () {
 		
@@ -144,7 +145,7 @@ public class GameController : MonoBehaviour
 			else{
 				iTween.MoveTo(clone, iTween.Hash("path", iTweenPath.GetPath("New Path 1"), "speed", 5));
 			}
-			
+			clone.GetComponent<Pixelnest.BulletML.BulletSourceScript>().xmlFile = bulletFile;
 			Enemy.Add (clone);
 		}
 		count++;
