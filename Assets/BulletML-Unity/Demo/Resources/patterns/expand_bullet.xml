@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml>
+
+  <action label="top">
+    <action>
+      <repeat>
+        <times>99999</times>
+		<action>
+        		<trigger>beforefire</trigger>
+        		<wait>30</wait>
+        		
+        		<fire>
+  				<direction type="absolute">0</direction>
+  				<speed>1</speed>
+  				<bullet />
+				</fire>
+        		<fire>
+  				<direction type="absolute">10</direction>
+  				<speed>1</speed>
+  				<bullet />
+				</fire>
+        		<fire>
+  				<direction type="absolute">350</direction>
+  				<speed>1</speed>
+  				<bullet />
+				</fire>
+        		<fire>
+  				<direction type="absolute">20</direction>
+  				<speed>1</speed>
+  				<bullet />
+				</fire>
+        		<fire>
+  				<direction type="absolute">340</direction>
+  				<speed>1</speed>
+  				<bullet />
+				</fire>
+
+        
+        		<wait>30</wait>
+        		<trigger>afterfire</trigger>
+
+        		<wait>60</wait>
+			</action>
+      </repeat>
+    </action>
+  </action>
+
+
+</bulletml>

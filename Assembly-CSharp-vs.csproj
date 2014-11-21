@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{A9E0FC41-14CF-D843-E175-F58973F98C54}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Advanced Pooling System\Demo\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Advanced Pooling System\Demo\Scripts\DieTimer.cs" />
+     <Compile Include="Assets\Advanced Pooling System\Demo\Scripts\HUDScript.cs" />
+     <Compile Include="Assets\Advanced Pooling System\Demo\Scripts\Ship.cs" />
+     <Compile Include="Assets\Advanced Pooling System\PoolingSystem.cs" />
+     <Compile Include="Assets\BulletML-Unity\Demo\Scripts\DemoBossController.cs" />
+     <Compile Include="Assets\BulletML-Unity\Demo\Scripts\DemoFightScript.cs" />
+     <Compile Include="Assets\BulletML-Unity\Demo\Scripts\DemoPlayerController.cs" />
+     <Compile Include="Assets\BulletML-Unity\Demo\Scripts\DemoPlayerShotScript.cs" />
+     <Compile Include="Assets\BulletML-Unity\Demo\Scripts\DemoShowcaseScript.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Bullet.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\BulletMLEquation.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\BulletPattern.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\ENodeName.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\ENodeType.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\EPatternType.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\ERunStatus.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\FireData.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\GameManager.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\IBulletManager.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\AccelNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\ActionNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\ActionRefNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\BulletMLNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\BulletNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\BulletRefNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\ChangeDirectionNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\ChangeSpeedNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\DirectionNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\FireNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\FireRefNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\HorizontalNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\NodeFactory.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\ParamNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\RepeatNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\SpeedNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\TermNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\TimesNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\TriggerNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\VanishNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\VerticalNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Nodes\WaitNode.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\PositionDelegate.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Properties\AssemblyInfo.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\AccelTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\ActionTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\BulletMLTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\ChangeDirectionTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\ChangeSpeedTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\FireTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\RepeatTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\SetDirectionTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\SetSpeedTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\TriggerTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\VanishTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Plugins\BulletMLLib\Source\Tasks\WaitTask.cs" />
+     <Compile Include="Assets\BulletML-Unity\Scripts\BulletManagerScript.cs" />
+     <Compile Include="Assets\BulletML-Unity\Scripts\BulletScript.cs" />
+     <Compile Include="Assets\BulletML-Unity\Scripts\BulletSourceScript.cs" />
+     <Compile Include="Assets\BulletML-Unity\Scripts\Models\BulletBank.cs" />
+     <Compile Include="Assets\BulletML-Unity\Scripts\Models\BulletObject.cs" />
+     <Compile Include="Assets\BulletML-Unity\Scripts\Models\TopBullet.cs" />
+     <Compile Include="Assets\Mover2D.cs" />
+     <Compile Include="Assets\PlayerBomb.cs" />
+     <Compile Include="Assets\PlayerController2D.cs" />
+     <Compile Include="Assets\Scripts\DestroyByContact.cs" />
+     <Compile Include="Assets\Scripts\DestroyByTime.cs" />
+     <Compile Include="Assets\Scripts\EnemyFire.cs" />
+     <Compile Include="Assets\Scripts\ExampleScript.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\Mover.cs" />
+     <Compile Include="Assets\Scripts\MyController.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\RandomRotator.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\UFOController.cs" />
+     <Compile Include="Assets\Scripts\destroyByBoundary.cs" />
+     <Compile Include="Assets\Scripts\sparksController.cs" />
+     <Compile Include="Assets\destroyableActor.cs" />
+     <Compile Include="Assets\enemy.cs" />
+     <Compile Include="Assets\enemyExample.cs" />
+     <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
+     <Compile Include="Assets\iTweenEditor\Helper Classes\EventParamMappings.cs" />
+     <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
+     <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransformArray.cs" />
+     <Compile Include="Assets\iTweenEditor\iTween.cs" />
+     <Compile Include="Assets\iTweenEditor\iTweenEvent.cs" />
+     <Compile Include="Assets\iTweenEditor\iTweenPath.cs" />
+     <Compile Include="Assets\testspawn.cs" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_time_twist.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\circle_bullet.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_homing.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[tenmado]_5_boss_1.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss1.xml" />
+     <None Include="Assets\Advanced Pooling System\Readme.txt" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_two_cross.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Dodonpachi]_hibachi.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\swirl_bullet.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_DNA.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\accel_bullet.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_2_boss_struggling.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_10_boss_before_final.xml" />
+     <None Include="Assets\iTweenEditor\README.txt" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Dodonpachi]_kitiku_3.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\straight_bullet.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[MDA]_mojya.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_circle.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\triple_bullet.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Progear]_round_1_boss_grow_bullets.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[XII_STAG]_3b.xml" />
+     <None Include="Assets\license.txt" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Bulletsmorph]_kunekune_plus_homing.xml" />
+     <None Include="Assets\BulletML-Unity\Plugins\BulletMLLib\LICENSE.txt" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[SilverGun]_4D_boss_PENTA.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_curves.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Original]_tsunami.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[OtakuTwo]_self-1020.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\expand_bullet.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss4.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Ketui_LT]_2boss_winder_crash.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\example_triggers.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[MDA]_mossari.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss3.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\spiral_circle_bullets.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[Bulletsmorph]_fallen_string.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_BossFinal.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[shmupfest]_Boss2.xml" />
+     <None Include="Assets\BulletML-Unity\Demo\Resources\patterns\[MDA]_circular_sun.xml" />
+ <Reference Include="Equationator">
+ <HintPath>C:/Users/ng125/Documents/Spassssss-master/Spassssss-master/spassss/Assets/BulletML-Unity/Plugins/BulletMLLib/externals/Equationator.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
