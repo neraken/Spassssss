@@ -1,0 +1,28 @@
+{
+  "Queue": [
+    {
+      "pattern": "straight_bullet1",
+      "enemy": "asteroid",
+      "path": "New Path 1",
+      "time": 5.01
+    },
+        {
+      "pattern": "straight_bullet2",
+      "enemy": "asteroid",
+      "path": "New Path 1",
+      "time": 7.01
+    },
+        {
+      "pattern": "straight_bullet3",
+      "enemy": "asteroid",
+      "path": "New Path 1",
+      "time": 9.01
+    },
+        {
+      "pattern": "straight_bullet4",
+      "enemy": "asteroid",
+      "path": "New Path 1",
+      "time": 11.01
+    }
+  ]
+}

@@ -44,7 +44,11 @@ public class GameController : MonoBehaviour
 	public Texture2D startBtnImg;
 	public Texture2D quitBtnImg;	
 	private bool startSpawn;
-	public TextAsset bulletFile;
+
+	public TextAsset EnemySpawn;
+	private EnemyQueue[] enemySpawnAray;
+	private float levelTimeEllapsed = 0.0f;
+	private int enemySpawnCount = 0;
 	private int count = 0;
 	void OnGUI () {
 		
@@ -72,29 +76,36 @@ public class GameController : MonoBehaviour
 	}
 	void Start ()
 	{
-		gameOver = false;
-		restart = false;
-		restartText.text = "";
-		gameOverText.text = "";
-		abilityCharge = 100;
-		lifeText.text = "life:" + playerLives;
-		bombText.text = "bomb:" + bombCount;
-		abilityText.text = "Ability:" + abilityCharge + "%";
-		score = 0;
-		UpdateScore ();
-		//StartCoroutine (SpawnWaves ());
-		startSpawn = false;
+				gameOver = false;
+				restart = false;
+				restartText.text = "";
+				gameOverText.text = "";
+				abilityCharge = 100;
+				lifeText.text = "life:" + playerLives;
+				bombText.text = "bomb:" + bombCount;
+				abilityText.text = "Ability:" + abilityCharge + "%";
+				score = 0;
+				UpdateScore ();
+				//StartCoroutine (SpawnWaves ());
+				startSpawn = false;
 		
 		
-		Instantiate (playerShip);
+				Instantiate (playerShip);
 		
-		spawners = GameObject.FindGameObjectsWithTag ("Spawn");
-		//sort array into list
-		//linq 
-		//http://stackoverflow.com/questions/722868/sorting-a-list-using-lambda-linq-to-objects
-		InvokeRepeating ("SpawnTimeTable",1,1);
-		Enemy = new List<GameObject> ();
-	}
+				spawners = GameObject.FindGameObjectsWithTag ("Spawn");
+				//sort array into list
+				//linq 
+				//http://stackoverflow.com/questions/722868/sorting-a-list-using-lambda-linq-to-objects
+				InvokeRepeating ("SpawnTimeTable", 1, 1);
+				Enemy = new List<GameObject> ();
+
+				JSONObject jo = new JSONObject (EnemySpawn.text);
+				JSONArray ja = jo.getJSONArray ("Queue");
+				enemySpawnAray = new EnemyQueue [3];
+				for (int i = 0; i < enemySpawnAray.Length; i++) {
+			enemySpawnAray [i] = new EnemyQueue (ja.getJSONObject(i).getString ("pattern"), ja.getJSONObject(i).getString ("enemy"), ja.getJSONObject(i).getString ("path"), ja.getJSONObject(i).getDouble ("time"));		
+				}
+		}
 	
 	void Update ()
 	{
@@ -131,6 +142,18 @@ public class GameController : MonoBehaviour
 			lifeText.text = "life:0";
 			
 		}
+		if (enemySpawnCount < enemySpawnAray.Length) {
+						if (enemySpawnAray [enemySpawnCount].time < levelTimeEllapsed) {
+
+								Debug.Log (enemySpawnAray [enemySpawnCount].pattern);
+								enemySpawnCount += 1;
+						} else {
+								levelTimeEllapsed += Time.deltaTime;
+						}
+		}
+		else{
+				Debug.Log ("End of Level");
+			}
 	}
 	
 	void SpawnTimeTable(){
@@ -139,16 +162,16 @@ public class GameController : MonoBehaviour
 			GameObject clone = Instantiate (engines_enemy, spawn.transform.position, Quaternion.Euler(90, 0, 0)) as GameObject;
 			//GameObject clone = Instantiate (engines_enemy) as GameObject;
 			clone.name = "Enemy - " + Time.time.ToString ();
-			if(count % 2 == 0){
-				iTween.MoveTo(clone, iTween.Hash("path", iTweenPath.GetPath("New Path 2"), "speed", 5));
-			}
-			else{
-				iTween.MoveTo(clone, iTween.Hash("path", iTweenPath.GetPath("New Path 1"), "speed", 5));
-			}
-			clone.GetComponent<Pixelnest.BulletML.BulletSourceScript>().xmlFile = bulletFile;
-			Enemy.Add (clone);
-		}
-		count++;
+//			if(count % 2 == 0){
+//				iTween.MoveTo(clone, iTween.Hash("path", iTweenPath.GetPath("New Path 2"), "speed", 5));
+//			}
+//			else{
+//				iTween.MoveTo(clone, iTween.Hash("path", iTweenPath.GetPath("New Path 1"), "speed", 5));
+//			}
+//			//clone.GetComponent<Pixelnest.BulletML.BulletSourceScript>().xmlFile = bulletFile;
+//			Enemy.Add (clone);
+//		}
+//		count++;
 	}
 	//	IEnumerator SpawnWaves ()
 	//	{
@@ -171,7 +194,7 @@ public class GameController : MonoBehaviour
 	//				break;
 	//			}
 	//		}
-	//	}
+		}
 	
 	public void AddScore (int newScoreValue)
 	{
