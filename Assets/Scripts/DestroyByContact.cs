@@ -61,6 +61,7 @@ public class DestroyByContact : MonoBehaviour
 {
 	public GameObject explosion;
 	public GameObject playerExplosion;
+	public GameObject deathExplosion;
 	public int scoreValue;
 	private GameController gameController;
 
@@ -100,7 +101,7 @@ public class DestroyByContact : MonoBehaviour
 			Destroy (other.gameObject);
 			Destroy (gameObject);
 		} else if(gameObject.tag == "Enemy" && other.tag == "PlayerBullet"){
-			Instantiate(explosion, transform.position, transform.rotation);
+			Instantiate(deathExplosion, transform.position, transform.rotation);
 			Destroy (other.gameObject);
 			enemy e = (enemy) gameObject.GetComponent(typeof(enemy));
 			e.doDmg(1);

@@ -131,6 +131,7 @@
      <Compile Include="Assets\Scripts\UFOController.cs" />
      <Compile Include="Assets\Scripts\destroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\sparksController.cs" />
+     <Compile Include="Assets\VFX\Script\Button.cs" />
      <Compile Include="Assets\destroyableActor.cs" />
      <Compile Include="Assets\enemy.cs" />
      <Compile Include="Assets\enemyExample.cs" />
