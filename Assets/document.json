@@ -1,11 +1,83 @@
 {
   "Queue": [
+      {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 1",
+      "time": 1.00
+    },
+      {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 2",
+      "time": 1.10
+    },
+    
+        {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 1",
+      "time": 1.50
+    },
+      {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 2",
+      "time": 1.60
+    },
+    
+        {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 1",
+      "time": 2.00
+    },
+      {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 2",
+      "time": 2.10
+    },
+    
+        {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 1",
+      "time": 2.50
+    },
+      {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 2",
+      "time": 2.60
+    },
+    
+        {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 1",
+      "time": 3.00
+    },
+      {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 2",
+      "time": 3.10
+    },
+    
     {
       "pattern": "straight_bullet",
       "enemy": "Enemy",
       "path": "New Path 1",
-      "time": 2.01
+      "time": 3.50
     },
+      {
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 2",
+      "time": 3.60
+    },
+    
         {
       "pattern": "circle_bullet",
       "enemy": "Enemy 2",

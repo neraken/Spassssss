@@ -155,7 +155,7 @@ public class GameController : MonoBehaviour
 				GameObject enemyPrefab = (GameObject) Resources.Load("prefabs/" + enemySpawnAray [enemySpawnCount].enemy); 
 				GameObject clone = Instantiate (enemyPrefab, spawn.transform.position, Quaternion.Euler(90, 0, 0)) as GameObject;
 				clone.name = "Enemy - " + Time.time.ToString ();
-				iTween.MoveTo(clone, iTween.Hash("path", iTweenPath.GetPath(enemySpawnAray [enemySpawnCount].path), "speed", 1));
+				iTween.MoveTo(clone, iTween.Hash("path", iTweenPath.GetPath(enemySpawnAray [enemySpawnCount].path), "time", 30));
 				TextAsset textAsset = (TextAsset) Resources.Load("patterns/" + enemySpawnAray [enemySpawnCount].pattern);
 				//Debug.Log (bulletPattern.text);
 				clone.GetComponent<Pixelnest.BulletML.BulletSourceScript>().xmlFile = textAsset;
