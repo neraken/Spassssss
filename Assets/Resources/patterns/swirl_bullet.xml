@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml>
+
+  <action label="top">
+    <action>
+      <repeat>
+        <times>99999</times>
+        <action>
+          <!-- Curve shot-->
+          <fire>
+            <direction type="sequence">10</direction>
+            <speed>1</speed>
+            <bullet label="aim">
+
+            </bullet>
+          </fire>
+          <wait>1</wait>
+        </action>
+      </repeat>
+    </action>
+  </action>
+
+
+</bulletml>

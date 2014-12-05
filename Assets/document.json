@@ -1,26 +1,26 @@
 {
   "Queue": [
     {
-      "pattern": "straight_bullet1",
-      "enemy": "asteroid",
+      "pattern": "straight_bullet",
+      "enemy": "Enemy",
       "path": "New Path 1",
-      "time": 5.01
+      "time": 2.01
     },
         {
-      "pattern": "straight_bullet2",
-      "enemy": "asteroid",
-      "path": "New Path 1",
-      "time": 7.01
-    },
-        {
-      "pattern": "straight_bullet3",
-      "enemy": "asteroid",
+      "pattern": "circle_bullet",
+      "enemy": "Enemy 2",
       "path": "New Path 1",
       "time": 9.01
     },
         {
-      "pattern": "straight_bullet4",
-      "enemy": "asteroid",
+      "pattern": "expand_bullet",
+      "enemy": "Enemy",
+      "path": "New Path 2",
+      "time": 9.51
+    },
+        {
+      "pattern": "triple_bullet",
+      "enemy": "Enemy 2",
       "path": "New Path 1",
       "time": 11.01
     }

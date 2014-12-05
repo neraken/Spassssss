@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml;
 
 public class GameController : MonoBehaviour
 {
@@ -34,8 +36,7 @@ public class GameController : MonoBehaviour
 	private bool paused;
 	
 	public GameObject playerShip;
-	public GameObject bulletManager;
-	public GameObject engines_enemy;
+	//public GameObject enemyPrefab;
 	private GameObject[] spawners;
 	private List <GameObject> Enemy;
 	
@@ -101,10 +102,11 @@ public class GameController : MonoBehaviour
 
 				JSONObject jo = new JSONObject (EnemySpawn.text);
 				JSONArray ja = jo.getJSONArray ("Queue");
-				enemySpawnAray = new EnemyQueue [3];
+				enemySpawnAray = new EnemyQueue [ja.length()];
 				for (int i = 0; i < enemySpawnAray.Length; i++) {
 			enemySpawnAray [i] = new EnemyQueue (ja.getJSONObject(i).getString ("pattern"), ja.getJSONObject(i).getString ("enemy"), ja.getJSONObject(i).getString ("path"), ja.getJSONObject(i).getDouble ("time"));		
 				}
+
 		}
 	
 	void Update ()
@@ -142,10 +144,21 @@ public class GameController : MonoBehaviour
 			lifeText.text = "life:0";
 			
 		}
+
+
+		//spawn based on json
 		if (enemySpawnCount < enemySpawnAray.Length) {
 						if (enemySpawnAray [enemySpawnCount].time < levelTimeEllapsed) {
 
-								Debug.Log (enemySpawnAray [enemySpawnCount].pattern);
+								//Debug.Log (enemySpawnAray [enemySpawnCount].pattern);
+				GameObject spawn = spawners [0];
+				GameObject enemyPrefab = (GameObject) Resources.Load("prefabs/" + enemySpawnAray [enemySpawnCount].enemy); 
+				GameObject clone = Instantiate (enemyPrefab, spawn.transform.position, Quaternion.Euler(90, 0, 0)) as GameObject;
+				clone.name = "Enemy - " + Time.time.ToString ();
+				iTween.MoveTo(clone, iTween.Hash("path", iTweenPath.GetPath(enemySpawnAray [enemySpawnCount].path), "speed", 1));
+				TextAsset textAsset = (TextAsset) Resources.Load("patterns/" + enemySpawnAray [enemySpawnCount].pattern);
+				//Debug.Log (bulletPattern.text);
+				clone.GetComponent<Pixelnest.BulletML.BulletSourceScript>().xmlFile = textAsset;
 								enemySpawnCount += 1;
 						} else {
 								levelTimeEllapsed += Time.deltaTime;
@@ -159,9 +172,9 @@ public class GameController : MonoBehaviour
 	void SpawnTimeTable(){
 		if (startSpawn) {
 			GameObject spawn = spawners [0];
-			GameObject clone = Instantiate (engines_enemy, spawn.transform.position, Quaternion.Euler(90, 0, 0)) as GameObject;
-			//GameObject clone = Instantiate (engines_enemy) as GameObject;
-			clone.name = "Enemy - " + Time.time.ToString ();
+			//GameObject clone = Instantiate (enemyPrefab, spawn.transform.position, Quaternion.Euler(90, 0, 0)) as GameObject;
+			//GameObject clone = Instantiate (enemyPrefab) as GameObject;
+			//clone.name = "Enemy - " + Time.time.ToString ();
 //			if(count % 2 == 0){
 //				iTween.MoveTo(clone, iTween.Hash("path", iTweenPath.GetPath("New Path 2"), "speed", 5));
 //			}
