@@ -95,6 +95,150 @@
       "enemy": "Enemy 2",
       "path": "New Path 1",
       "time": 11.01
-    }
+    },
+        {
+      "pattern": "swirl_bullet",
+      "enemy": "Enemy 2",
+      "path": "New Path 1",
+      "time": 12.00
+    },
+        {
+      "pattern": "swirl_bullet",
+      "enemy": "Enemy 2",
+      "path": "New Path 2",
+      "time": 12.01
+    },
+        {
+      "pattern": "expand_bullet",
+      "enemy": "Enemy 2",
+      "path": "Path LRX",
+      "time": 18.00
+    },
+        {
+      "pattern": "spiral_circle_bullets",
+      "enemy": "Enemy 2",
+      "path": "Path RLX",
+      "time": 18.01
+    },
+        {
+      "pattern": "triple_bullet",
+      "enemy": "Enemy 2",
+      "path": "New Path 1",
+      "time": 24.00
+    },
+        {
+      "pattern": "swirl_bullet",
+      "enemy": "Enemy 2",
+      "path": "New Path 1",
+      "time": 24.51
+    },
+        {
+      "pattern": "expand_bullet",
+      "enemy": "Enemy 2",
+      "path": "New Path 1",
+      "time": 30.00
+    },
+        {
+      "pattern": "expand_bullet",
+      "enemy": "Enemy 2",
+      "path": "New Path 2",
+      "time": 36.00
+    },
+        {
+      "pattern": "triple_bullet",
+      "enemy": "Enemy 2",
+      "path": "Path RLX",
+      "time": 36.01
+    },
+        {
+      "pattern": "expand_bullet",
+      "enemy": "Enemy 2",
+      "path": "Path LRX",
+      "time": 42.00
+    },
+	        {
+      "pattern": "swirl_bullet",
+      "enemy": "Enemy 2",
+      "path": "Path RLX",
+      "time": 42.01
+    },
+        {
+      "pattern": "expand_bullet",
+      "enemy": "Enemy 2",
+      "path": "New Path 1",
+      "time": 42.02
+    },
+        {
+      "pattern": "expand_bullet",
+      "enemy": "Enemy 2",
+      "path": "Path LRX",
+      "time": 48.00
+    },
+        {
+      "pattern": "spiral_circle_bullets",
+      "enemy": "Enemy 2",
+      "path": "Path RLX",
+      "time": 48.01
+    },
+	    {
+      "pattern": "expand_bullet",
+      "enemy": "Enemy 2",
+      "path": "New Path 2",
+      "time": 48.02
+    },
+        {
+      "pattern": "spiral_circle_bullets",
+      "enemy": "Enemy 2",
+      "path": "Path LRX",
+		"time": 54.00
+    },
+        {
+      "pattern": "triple_bullet",
+      "enemy": "Enemy 2",
+      "path": "Path RLX",
+      "time": 54.01
+    },
+        {
+      "pattern": "expand_bullet",
+      "enemy": "Enemy 2",
+      "path": "Path LRX",
+      "time": 48.00
+    },
+        {
+      "pattern": "spiral_circle_bullets",
+      "enemy": "Enemy 2",
+      "path": "Path RLX",
+      "time": 48.01
+    },
+	    {
+      "pattern": "expand_bullet",
+      "enemy": "Enemy 2",
+      "path": "New Path 2",
+      "time": 48.02
+    },
+        {
+      "pattern": "spiral_circle_bullets",
+      "enemy": "Enemy 2",
+      "path": "Path LRX",
+		"time": 54.00
+    },
+        {
+      "pattern": "triple_bullet",
+      "enemy": "Enemy 2",
+      "path": "Path RLX",
+      "time": 54.01
+    },
+        {
+      "pattern": "swirl_bullet",
+      "enemy": "Enemy 2",
+      "path": "Upper RL Straight",
+      "time": 56.00
+    },
+        {
+      "pattern": "spiral_circle_bullets",
+      "enemy": "Enemy 2",
+      "path": "Lower RL Straight",
+      "time": 56.01
+    },
   ]
 }
