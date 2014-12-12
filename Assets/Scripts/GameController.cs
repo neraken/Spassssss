@@ -45,6 +45,8 @@ public class GameController : MonoBehaviour
 	public Texture2D startBtnImg;
 	public Texture2D quitBtnImg;	
 	private bool startSpawn;
+	public AudioClip bombSound;
+	public AudioClip bombFailSound;
 
 	public TextAsset EnemySpawn;
 	private EnemyQueue[] enemySpawnAray;
@@ -241,21 +243,25 @@ public class GameController : MonoBehaviour
 	
 	public void bombUsed(){
 		if (bombCount > 0) {
-			Debug.Log ("bomb used");
-			GameObject[] everything = GameObject.FindGameObjectsWithTag ("Enemy");
-			for (int i = 0; i < everything.Length; i++) {
-				Instantiate (bombExplosion, everything [i].transform.position, everything [i].transform.rotation);
-				enemy e = (enemy) everything[i].GetComponent(typeof(enemy));
-				e.doDmg(10);
-			}
-			GameObject[] bullets = GameObject.FindGameObjectsWithTag("enemy");
-			for(int i = 0; i < bullets.Length; i++){
-				Instantiate (bombExplosion, bullets [i].transform.position, bullets [i].transform.rotation);
-				Destroy (bullets [i]);
-			}
-			bombCount = bombCount -1;
-			bombText.text = "bomb:" + bombCount;
-		}
+						Debug.Log ("bomb used");
+						GameObject[] everything = GameObject.FindGameObjectsWithTag ("Enemy");
+						audio.PlayOneShot (bombSound);
+						for (int i = 0; i < everything.Length; i++) {
+								Instantiate (bombExplosion, everything [i].transform.position, everything [i].transform.rotation);
+								enemy e = (enemy)everything [i].GetComponent (typeof(enemy));
+								e.doDmg (10);
+						}
+						GameObject[] bullets = GameObject.FindGameObjectsWithTag ("enemy");
+						for (int i = 0; i < bullets.Length; i++) {
+								Instantiate (bombExplosion, bullets [i].transform.position, bullets [i].transform.rotation);
+								Destroy (bullets [i]);
+						}
+						bombCount = bombCount - 1;
+						bombText.text = "bomb:" + bombCount;
+
+				} else {
+			audio.PlayOneShot(bombFailSound);
+				}
 		
 	}
 	public void abilityUsed(){

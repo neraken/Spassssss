@@ -14,11 +14,11 @@ public class MovePointer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.W) && menuCurrPosition > 1){
+		if((Input.GetKeyDown(KeyCode.W) && menuCurrPosition > 1) || (Input.GetKeyDown(KeyCode.UpArrow) && menuCurrPosition > 1)){
 			transform.Translate(0.0f,1.6f,0.0f);
 			menuCurrPosition--;
 		}
-		if (Input.GetKeyDown (KeyCode.S) && menuCurrPosition < numMenuItems) {
+		if ((Input.GetKeyDown (KeyCode.S) && menuCurrPosition < numMenuItems) || (Input.GetKeyDown (KeyCode.DownArrow) && menuCurrPosition < numMenuItems) ) {
 			transform.Translate(0.0f,-1.6f,0.0f);
 			menuCurrPosition++;
 

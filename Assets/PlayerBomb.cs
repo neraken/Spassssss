@@ -8,8 +8,5 @@ public class PlayerBomb : MonoBehaviour {
 	{
 		if (other.tag == "enemy") {
 			Destroy (other.gameObject);
-		}
-
-	}
-
-}
+			audio.Play ();
+		}}}
